@@ -100,9 +100,18 @@ h3 {
 
 .button {
   display: inline-block;
-  color: var(--color-green);
+  color: var(--color-dk-purple);
+  font-weight: 700;
+  background-color: var(--color-green);
   padding: 13px 32px 16px;
-  border: 2px solid;
+  border: 2px solid var(--color-green);
+  transition: 150ms ease-in-out;
+  transition-property: background-color, color;
+}
+.button:hover {
+  color: var(--color-green);
+  border: 2px solid var(--color-green);
+  background-color: transparent;
 }
 
 .header {
@@ -139,8 +148,37 @@ h3 {
 }
 
 .hero {
+  position: relative;
   background-color: var(--color-dk-purple);
   text-align: center;
+}
+.hero::before, .hero::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (max-width: 43.74875em) {
+  .hero::before, .hero::after {
+    display: none;
+  }
+}
+.hero::before {
+  top: 0;
+  left: 0;
+  translate: -35% 0;
+  width: 16.875rem;
+  height: 13.4375rem;
+  background-image: url("/assets/images/bg-pattern-1.svg");
+}
+.hero::after {
+  right: 0;
+  bottom: 0;
+  width: 8.125rem;
+  height: 8.4375rem;
+  translate: 25% 22%;
+  background-image: url("/assets/images/bg-pattern-2.svg");
 }
 .hero__headline {
   color: var(--color-white);

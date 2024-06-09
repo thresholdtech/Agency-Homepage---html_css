@@ -2,8 +2,17 @@
 
 .button{
     display: inline-block;
-    color: var(--color-green);
+    color: var(--color-dk-purple);
+    font-weight: 700;
+    background-color: var(--color-green);
     padding: 13px 32px 16px;
-    border: 2px solid;
+    border: 2px solid var(--color-green);
+    transition: 150ms ease-in-out;
+    transition-property: background-color, color;
 
+    &:hover{
+        color: var(--color-green);
+        border: 2px solid var(--color-green);
+        background-color: transparent;
+    }
 }
