@@ -1,0 +1,9 @@
+@use '../util/' as u;
+
+.button{
+    display: inline-block;
+    color: var(--color-green);
+    padding: 13px 32px 16px;
+    border: 2px solid;
+
+}

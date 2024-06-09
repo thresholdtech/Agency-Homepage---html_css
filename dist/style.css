@@ -1,0 +1,176 @@
+*,
+*, ::before,
+*, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 0.94rem + 0.28vw, 1.125rem);
+  line-height: 1.7;
+  min-height: 150vh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: min(100% - 2rem, 69.375rem);
+  margin-inline: auto;
+}
+
+:root {
+  --color-dk-purple: hsl(273, 85%, 13%);
+  --color-purple: hsl(271, 12%, 34%);
+  --color-green: hsl(150, 100%, 63%);
+  --color-lt-grey: hsl(274, 100%, 99%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+/* manrope-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/manrope-v15-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* fraunces-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../assets/fonts/fraunces-v31-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  line-height: 1.1;
+}
+h1 span,
+h2 span,
+h3 span {
+  display: inline-block;
+}
+h1 span::after,
+h2 span::after,
+h3 span::after {
+  content: "";
+  height: 2px;
+  display: block;
+  background-color: var(--color-green);
+}
+
+h1 {
+  font-size: clamp(3.125rem, 2.15rem + 4.13vw, 5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 1.22rem + 3.31vw, 3.5rem);
+}
+
+h3 {
+  font-size: clamp(1.75rem, 1.62rem + 0.55vw, 2rem);
+}
+
+.button {
+  display: inline-block;
+  color: var(--color-green);
+  padding: 13px 32px 16px;
+  border: 2px solid;
+}
+
+.header {
+  background-color: var(--color-dk-purple);
+  color: var(--color-white);
+  padding-block: 32px 64px;
+}
+@media (min-width: 56.25em) {
+  .header {
+    padding-block: 56px;
+  }
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  width: 6rem;
+  height: auto;
+}
+.header__link {
+  color: var(--color-white);
+}
+.header__link:hover {
+  color: var(--color-green);
+}
+.header__link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: var(--color-green);
+  margin-block-start: 4px;
+}
+
+.hero {
+  background-color: var(--color-dk-purple);
+  text-align: center;
+}
+.hero__headline {
+  color: var(--color-white);
+  margin-block-end: 2.5rem;
+  max-width: 11ch;
+  margin-inline: auto;
+}
+.hero__button {
+  margin-block-end: 3.125rem;
+}
+.hero__image-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(var(--color-dk-purple) 50%, var(--color-white) 50%);
+  padding-inline: 32px;
+}
+.hero__image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 0 0;
+  width: 100%;
+  height: 100px;
+  background-image: url("/assets/images/curve-bottom.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 5vh;
+}
+.hero__image {
+  margin-inline: auto;
+  position: relative;
+  z-index: 1;
+}/*# sourceMappingURL=style.css.map */

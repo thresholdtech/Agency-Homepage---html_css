@@ -1,0 +1,49 @@
+@use '../util/' as u;
+
+.hero{
+    background-color: var(--color-dk-purple);
+    text-align: center;
+
+    &__wrapper{
+
+    }
+
+    &__headline{
+        color: var(--color-white);
+        margin-block-end: u.rem(40);
+        max-width: 11ch;
+        margin-inline: auto;
+    }
+
+    &__button{
+        margin-block-end: u.rem(50);
+    }
+
+    &__image-wrapper{
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(
+            var(--color-dk-purple) 50%,
+            var(--color-white) 50%);
+        padding-inline: 32px;
+
+        &::after {
+            content:'';
+            position: absolute;
+            inset: 50% 0 0 0;
+            width: 100%;
+            height: 100px;
+            background-image: url('/assets/images/curve-bottom.svg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 5vh;
+        }
+    }
+
+    &__image{
+        margin-inline: auto;
+        position: relative;
+        z-index: 1;
+    }
+}
