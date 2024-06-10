@@ -10,6 +10,7 @@ body {
   font-size: clamp(1rem, 0.94rem + 0.28vw, 1.125rem);
   line-height: 1.7;
   min-height: 150vh;
+  overflow-x: hidden;
 }
 
 h1,
@@ -174,10 +175,10 @@ h3 {
 }
 .hero::after {
   right: 0;
-  bottom: 0;
+  top: 50%;
   width: 8.125rem;
   height: 8.4375rem;
-  translate: 25% 22%;
+  translate: 25% -120%;
   background-image: url("/assets/images/bg-pattern-2.svg");
 }
 .hero__headline {
@@ -190,22 +191,20 @@ h3 {
   margin-block-end: 3.125rem;
 }
 .hero__image-wrapper {
-  position: absolute;
-  left: 0;
-  right: 0;
+  position: relative;
   background-image: linear-gradient(var(--color-dk-purple) 50%, var(--color-white) 50%);
   padding-inline: 32px;
 }
 .hero__image-wrapper::after {
   content: "";
   position: absolute;
-  inset: 50% 0 0 0;
+  inset: 49.8% 0 0 0;
   width: 100%;
   height: 100px;
   background-image: url("/assets/images/curve-bottom.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  height: 5vh;
+  height: 4vw;
 }
 .hero__image {
   margin-inline: auto;
